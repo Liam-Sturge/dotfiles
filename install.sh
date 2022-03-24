@@ -24,3 +24,6 @@ sudo chsh -s $(which zsh) $USER
 
 # bundle zsh plugins
 antibody bundle < $HOME/.zsh_plugins.txt > $HOME/.zsh_plugins.sh
+
+# update nvim plugins
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
