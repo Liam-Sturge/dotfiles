@@ -14,7 +14,9 @@ nix-env -iA \
 	nixpkgs.antibody \
 	nixpkgs.tmux \
 	nixpkgs.curl \
-	nixpkgs.man
+	nixpkgs.man \
+	nixpkgs.gcc \
+	nixpkgs.gnumake
 
 # add zsh to valid login shells
 command -v zsh | sudo tee -a /etc/shells

@@ -28,8 +28,9 @@ return require("packer").startup({
   function(use)
     -- Packer can manage itself
     use("wbthomason/packer.nvim")
+    use("neovim/nvim-lspconfig")
     use({ "EdenEast/nightfox.nvim", config = get_config("nightfox") })
-    use('neovim/nvim-lspconfig')
+    use({ "nvim-treesitter/nvim-treesitter", config = get_config("treesitter"), run = "TSUpdate", })
 
     if packer_bootstrap then
       require("packer").sync()
